@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sun&amp;SandSports</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="label_response_error">Something went wrong please try again later.</string>
+</resources>

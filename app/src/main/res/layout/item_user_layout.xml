@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.sunsandsports.ui.User" />
+
+        <variable
+            name="position"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_17sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_17sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mImageViewUser"
+            imageUrl="@{user.picture.medium}"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:gravity="start"
+            android:text="@{user.name.first + ` `+user.name.last}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mImageViewUser"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Rajan Bhavsar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="start"
+            android:text="@{user.gender}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/color_splash_bg"
+            android:textSize="@dimen/textSize_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mImageViewUser"
+            app:layout_constraintTop_toBottomOf="@id/userFirstName"
+            tools:text="Male" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mTextViewPostion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{position}"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
